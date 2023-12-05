@@ -2,14 +2,14 @@ const gulp = require('gulp');
 
 const fs = require('fs'); // File system 
 const clean = require('gulp-clean'); // Clean file
-const fileInclude = require('gulp-file-include'); // Include file HTML
-const sass = require('gulp-sass')(require('sass')); // Сompilation Sass/Scss
-const sassGlob = require('gulp-sass-glob'); // Global imports
-const server = require('gulp-server-livereload'); // Load local server
-const sourceMaps = require('gulp-sourcemaps'); // Source map in css
-const plumber = require('gulp-plumber'); // Watch Error
-const notify = require('gulp-notify'); // Notify Error
-const webpack = require('webpack-stream'); // Module JS
+const fileInclude = require('gulp-file-include'); //* Include file HTML
+const sass = require('gulp-sass')(require('sass')); //* Сompilation Sass/Scss
+const sassGlob = require('gulp-sass-glob'); //* Global imports
+const server = require('gulp-server-livereload'); //* Load local server
+const sourceMaps = require('gulp-sourcemaps'); //* Source map in CSS
+const plumber = require('gulp-plumber'); //* Watch Error
+const notify = require('gulp-notify'); //* Notify Error
+const webpack = require('webpack-stream'); //* Module JS
 const changed = require('gulp-changed'); // Checking for changes
 
 

@@ -1,31 +1,33 @@
 const gulp = require('gulp');
 
 // HTML
-const fileInclude = require('gulp-file-include');
-const htmlclean = require('gulp-htmlclean');
-const webpHTML = require('gulp-webp-html');
+const fileInclude = require('gulp-file-include'); //* Include file HTML
+const htmlclean = require('gulp-htmlclean'); //* HTML minify without changing
+const webpHTML = require('gulp-webp-html-nosvg'); //* Converting images to WebP format in HTML
 
 // SASS
-const sass = require('gulp-sass')(require('sass'));
-const sassGlob = require('gulp-sass-glob');
-const autoprefixer = require('gulp-autoprefixer');
-const csso = require('gulp-csso');
-const webpCss = require('gulp-webp-css');
-
-const server = require('gulp-server-livereload');
-const clean = require('gulp-clean');
-const fs = require('fs');
-const sourceMaps = require('gulp-sourcemaps');
-const groupMedia = require('gulp-group-css-media-queries');
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
-const webpack = require('webpack-stream');
-const babel = require('gulp-babel'); // Support for older browsers for javascript compatibility
-const changed = require('gulp-changed');
+const sass = require('gulp-sass')(require('sass')); //* Сompilation Sass/Scss
+const sassGlob = require('gulp-sass-glob'); //* Global imports
+const autoprefixer = require('gulp-autoprefixer'); //* Adds prefixes in CSS to support older browsers
+const csso = require('gulp-csso'); //* Minify CSS
+const webpCss = require('gulp-webp-css'); //* Converting images to WebP format in CSS
 
 // Images
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
+const imagemin = require('gulp-imagemin'); //* image compression
+const webp = require('gulp-webp'); //* The ability сonvert images to WebP format
+
+// Other
+const server = require('gulp-server-livereload'); //* Load local server
+const clean = require('gulp-clean'); // Clean file
+const fs = require('fs'); // File system 
+const sourceMaps = require('gulp-sourcemaps'); //* Source map in CSS
+const groupMedia = require('gulp-group-css-media-queries'); //* Grouping media queries in CSS
+const plumber = require('gulp-plumber'); //* Watch Error
+const notify = require('gulp-notify'); //* Notify Error
+const webpack = require('webpack-stream'); //* Module JS
+const babel = require('gulp-babel'); //* Support for older browsers for javascript compatibility
+const changed = require('gulp-changed'); // Checking for changes
+
 
 
 // Tasks
