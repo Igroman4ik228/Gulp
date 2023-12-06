@@ -96,6 +96,7 @@ gulp.task('js:dev', function () {
 
 const serverOptions = {
 	livereload: true,
+	defaultFile: 'index.html',
 	open: true,
 };
 
