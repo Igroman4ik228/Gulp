@@ -118,11 +118,11 @@ gulp.task('js:docs', function () {
 		.pipe(gulp.dest('./docs/js/'));
 });
 
-const serverOptions = {
-	livereload: true,
-	open: true,
-};
 
 gulp.task('server:docs', function () {
-	return gulp.src('./docs/').pipe(server(serverOptions));
+	return gulp.src('./docs/').pipe(server({
+		livereload: true,
+		defaultFile: 'index.html',
+		open: true,
+	}));
 });

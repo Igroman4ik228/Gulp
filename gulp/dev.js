@@ -94,14 +94,13 @@ gulp.task('js:dev', function () {
 		.pipe(gulp.dest('./build/js/'));
 });
 
-const serverOptions = {
-	livereload: true,
-	defaultFile: 'index.html',
-	open: true,
-};
 
 gulp.task('server:dev', function () {
-	return gulp.src('./build/').pipe(server(serverOptions));
+	return gulp.src('./build/').pipe(server({
+		livereload: true,
+		defaultFile: 'index.html',
+		open: true,
+	}));
 });
 
 gulp.task('watch:dev', function () {
